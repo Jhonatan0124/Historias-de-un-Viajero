@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+/* Estilo para el video */
+#videoFondo {
+    position: fixed; /* Posición fija para cubrir toda la pantalla */
+    right: 0;
+    bottom: 0;
+    min-width: 100%; /* Mínimo ancho de 100% */
+    min-height: 100%; /* Mínimo alto de 100% */
+    z-index: -1; /* Coloca el video detrás de todo el contenido */
+}
+
+.login-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+    color: #F7DC6F; /* Cambia el color según tu diseño */
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    z-index: 10; 
+}
+
+.login-link:hover {
+    font-size: 22px;
+    color:  #FFFF33;
+
+
+}
+
+.contenido {
+    position: relative; /* Posición relativa para colocar sobre el video */
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+    /* Tus estilos adicionales aquí */
+}
+
+.container-form {
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    max-width: 900px;
+    transition: all 1s ease;
+    margin: 10px;
+}
+
+.information {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #F7DC6F;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.info-childs {
+    width: 100%;
+    padding: 0 30px;
+}
+
+.info-childs h2 {
+    font-size: 2.5rem;
+    color:#2471A3;
+}
+
+.info-childs p {
+    margin: 15px 0;
+    color: #2471A3;
+}
+
+.info-childs input {
+    background-color: transparent;
+    outline: none;
+    border: solid 2px #2471A3;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #2471A3;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.info-childs input:hover {
+    background-color: #2471A3;
+    border: none;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-information-childs {
+    padding: 0 30px;
+}
+
+.form-information-childs h2 {
+    color: #2471A3;
+    font-size: 2rem;
+}
+
+.form-information-childs p {
+    color: #2471A3;
+}
+
+.icons {
+    margin: 15px 0;    
+}
+
+.icons i {
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    color: #2471A3;
+    border: solid thin #2471A3;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);    
+}
+
+.icons i:hover {
+    background-color: #2471A3;
+    color:#fff;
+}
+
+.form {
+    margin: 30px 0 0 0;
+}
+
+.form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form label input {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #2471A3;
+}
+
+.form label i {
+    color: #2471A3;
+}
+
+.form input[type="submit"] {
+    background-color: #2471A3;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form input[type="submit"]:hover {
+    background-color: #F7DC6F;    
+}
+
+.hide {
+    position: absolute;
+    transform: translateY(-300%);
+}
+
+@media screen and (max-width:750px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:580px) {
+    html {
+        font-size: 10px;
+    }
+
+    .container-form {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .information {
+        width: 100%;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .form-information {
+        width: 100%;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+    }
+}
